@@ -1,0 +1,125 @@
+/* Fundo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c2c2c;
+    padding: 10px 20px;
+}
+
+/* Logo "E" */
+.logo {
+    background-color: #2ecc71;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 8px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    border: none;
+    background: #444;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+/* Menu */
+.menu {
+    color: #fff;
+}
+
+.menu a, .menu b {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Card central */
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #2b2b2b;
+    padding: 25px;
+    border-radius: 12px;
+    width: 600px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botão enviar */
+.btn-enviar {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #27ae60;
+}

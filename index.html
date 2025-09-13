@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estacionar — Home</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-box">
+      <div class="logo">E</div>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Pesquisar">
+      <button><span>&#128269;</span></button>
+    </div>
+    <div class="profile">
+      <span>&#128100;</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="sac.html">SAC</a> |
+        <a href="equipe.html">Equipe</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="content">
+    <div class="table-container">
+      <table class="car-table">
+        <thead>
+          <tr>
+            <th>Imagem</th>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="carro"></td>
+            <td>ABC-1234</td>
+            <td>Fusca</td>
+            <td>Ativo</td>
+            <td>
+              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
+              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="carro"></td>
+            <td>XYZ-9876</td>
+            <td>Civic</td>
+            <td>Ativo</td>
+            <td>
+              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
+              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="carro"></td>
+            <td>KLM-4567</td>
+            <td>Gol</td>
+            <td>Inativo</td>
+            <td>
+              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
+              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="carro"></td>
+            <td>QWE-1122</td>
+            <td>Corolla</td>
+            <td>Ativo</td>
+            <td>
+              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
+              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="carro"></td>
+            <td>RTY-3344</td>
+            <td>Onix</td>
+            <td>Ativo</td>
+            <td>
+              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
+              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- POPUP -->
+  <!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>Alterar Veículo</h2>
+    <form id="form-veiculo">
+      <div class="field">
+        <label for="imagem">Imagem (URL):</label>
+        <input type="text" id="imagem" name="imagem" placeholder="https://..." required>
+      </div>
+      <div class="field">
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" required>
+      </div>
+      <div class="field">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required>
+      </div>
+      <div class="field">
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+          <option value="Ativo">Ativo</option>
+          <option value="Inativo">Inativo</option>
+          <option value="Manutenção">Manutenção</option>
+        </select>
+      </div>
+      <div class="popup-actions">
+        <button type="button" class="btn cancelar" onclick="fecharPopup()">Cancelar</button>
+        <button type="submit" class="btn salvar">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <script>
+  const popup = document.getElementById("popup");
+  const form = document.getElementById("form-veiculo");
+  let currentRow = null;
+
+  function abrirPopup(btn){
+    currentRow = btn.closest("tr");
+    document.getElementById("imagem").value = currentRow.children[0].querySelector("img").src;
+    document.getElementById("placa").value = currentRow.children[1].textContent;
+    document.getElementById("modelo").value = currentRow.children[2].textContent;
+    document.getElementById("status").value = currentRow.children[3].textContent;
+    popup.style.display = "flex";
+  }
+
+  function fecharPopup(){
+    popup.style.display = "none";
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(currentRow){
+      currentRow.children[0].querySelector("img").src = document.getElementById("imagem").value;
+      currentRow.children[1].textContent = document.getElementById("placa").value;
+      currentRow.children[2].textContent = document.getElementById("modelo").value;
+      currentRow.children[3].textContent = document.getElementById("status").value;
+    }
+    fecharPopup();
+  });
+</script>
+
+
+</body>
+</html>
