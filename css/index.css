@@ -194,3 +194,9 @@ body{
   justify-content:flex-end;
   gap:8px;
 }
+
+.car-table img{
+  width:150px;
+  height:100px;
+  border-radius:6px;
+}
