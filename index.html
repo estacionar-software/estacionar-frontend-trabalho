@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Estacionar — Home</title>
+  <title>Estacionar</title>
   <link rel="stylesheet" href="css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="./script.js"></script>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="logo-box">
       <div class="logo">E</div>
@@ -18,17 +18,13 @@
       <input type="text" placeholder="Pesquisar">
       <button><span>&#128269;</span></button>
     </div>
-    <div class="profile">
-      <span>&#128100;</span>
-    </div>
-    <nav>
-        <a href="index.html">Home</a> |
+    <nav class="menu">
+        <b href="index.html">Home</b> |
         <a href="sac.html">SAC</a> |
         <a href="equipe.html">Equipe</a>
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main class="content">
     <div class="table-container">
       <table class="car-table">
@@ -97,8 +93,6 @@
     </div>
   </main>
 
-  <!-- POPUP -->
-  <!-- POPUP -->
 <div class="popup" id="popup">
   <div class="popup-content">
     <h2>Alterar Veículo</h2>
@@ -130,38 +124,6 @@
     </form>
   </div>
 </div>
-
-
-  <script>
-  const popup = document.getElementById("popup");
-  const form = document.getElementById("form-veiculo");
-  let currentRow = null;
-
-  function abrirPopup(btn){
-    currentRow = btn.closest("tr");
-    document.getElementById("imagem").value = currentRow.children[0].querySelector("img").src;
-    document.getElementById("placa").value = currentRow.children[1].textContent;
-    document.getElementById("modelo").value = currentRow.children[2].textContent;
-    document.getElementById("status").value = currentRow.children[3].textContent;
-    popup.style.display = "flex";
-  }
-
-  function fecharPopup(){
-    popup.style.display = "none";
-  }
-
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    if(currentRow){
-      currentRow.children[0].querySelector("img").src = document.getElementById("imagem").value;
-      currentRow.children[1].textContent = document.getElementById("placa").value;
-      currentRow.children[2].textContent = document.getElementById("modelo").value;
-      currentRow.children[3].textContent = document.getElementById("status").value;
-    }
-    fecharPopup();
-  });
-</script>
-
 
 </body>
 </html>
