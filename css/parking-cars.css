@@ -1,0 +1,220 @@
+:root{
+  --bg:#1f1f1f;
+  --accent-green:#22b573;
+  --text:#e8e8e8;
+  --muted:#2b2b2b;
+  --card:#0f0f0f;
+  --btn-dark:#2a2a2a;
+  --btn-green:#22b573;
+  --shadow:0 6px 20px rgba(0,0,0,0.5);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  height:100%;
+  font-family:"Poppins", system-ui, sans-serif;
+  background: linear-gradient(180deg,var(--muted), #111 70%);
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 20px;
+  background:#111;
+}
+
+.logo-box .logo{
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  background:var(--accent-green);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:18px;
+  color:#fff;
+}
+
+.search-box{
+  flex:1;
+  display:flex;
+  align-items:center;
+  background:#222;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.search-box input{
+  flex:1;
+  padding:8px 12px;
+  border:none;
+  background:none;
+  color:var(--text);
+  font-size:14px;
+}
+
+.search-box button{
+  border:none;
+  background:none;
+  color:var(--text);
+  padding:0 12px;
+  cursor:pointer;
+}
+
+.profile span{
+  font-size:22px;
+
+}
+
+.menu {
+    color: #fff;
+}
+
+.menu a, .menu b {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* TABELA */
+.table-container{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:40px;
+  overflow-x:auto;
+}
+
+.car-table{
+  width:93%;
+  border-collapse:collapse;
+  background:var(--card);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.car-table th, .car-table td{
+  padding:12px;
+  text-align:center;
+  border-bottom:1px solid #333;
+}
+
+.car-table th{
+  background:#222;
+  font-weight:600;
+  color:#ccc;
+}
+
+.car-table tr:hover{
+  background:#181818;
+}
+
+.car-table img{
+  width:40px;
+  height:40px;
+  border-radius:6px;
+}
+
+/* BOTÕES */
+.btn{
+  padding:6px 12px;
+  border:none;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.btn.alterar{
+  background:var(--btn-dark);
+  color:white;
+}
+
+.btn.finalizar{
+  background:var(--btn-green);
+  color:white;
+}
+
+.btn.cancelar{
+  background:var(--btn-dark);
+  color:white;
+}
+
+.btn.salvar{
+  background:var(--btn-green);
+  color:white;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.7);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+
+.popup-content{
+  background:#1e1e1e;
+  padding:24px;
+  border-radius:12px;
+  width:320px;
+  box-shadow:var(--shadow);
+}
+
+.popup-content h2{
+  margin-bottom:16px;
+  font-size:18px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:12px;
+}
+
+.field label{
+  font-size:13px;
+  margin-bottom:4px;
+  color:#ccc;
+}
+
+.field input{
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  background:#2b2b2b;
+  color:white;
+}
+
+.popup-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+}
+
+.car-table img{
+  width:150px;
+  height:100px;
+  border-radius:6px;
+}
+
+footer {
+  margin: 14px auto;
+}
+
+.paragraph-footer{
+  color: #22b573;
+}

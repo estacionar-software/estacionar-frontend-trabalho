@@ -199,3 +199,11 @@ textarea {
 .btn-enviar:hover {
     background-color: #27ae60;
 }
+
+footer {
+  margin: auto;
+}
+
+.paragraph-footer{
+  color: #22b573;
+}

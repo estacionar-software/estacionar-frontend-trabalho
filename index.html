@@ -20,6 +20,7 @@
     </div>
     <nav class="menu">
         <b href="index.html">Home</b> |
+        <a href="parking-cars.html">Vagas</a> |
         <a href="sac.html">SAC</a> |
         <a href="equipe.html">Equipe</a>
     </nav>
@@ -28,7 +29,7 @@
   <main class="content">
 
     <div class="explain-about-site">
-      <h2>Estacionar é uma solução moderna para gestão de estacionamentos.</h2>
+      <h1>Estacionar é uma solução moderna para gestão de estacionamentos.</h1>
       <p>Unindo tecnologia e praticidade em uma única plataforma. 
         Com ele, os estacionamentos têm <strong>total controle sobre suas vagas</strong>, sabendo em tempo real qual veículo está em cada posição. <br>
         Além disso, o sistema oferece uma funcionalidade exclusiva para fechamento de contas: <br>é possível cadastrar produtos e serviços adicionais fornecidos pelo estacionamento, 
@@ -36,105 +37,20 @@
         Assim, o cliente recebe uma cobrança unificada e o gestor garante mais organização, eficiência e transparência em suas operações.
       </p>
     </div>
+        
+    <img src="./assets/img-site-index.png" alt="">
 
-    <div class="table-container">
-      <table class="car-table">
-        <thead>
-          <tr>
-            <th>Imagem</th>
-            <th>Placa</th>
-            <th>Modelo</th>
-            <th>Status</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img src="./assets/Fusca.JPG"  alt="carro"></td>
-            <td>ABC-1234</td>
-            <td>Fusca</td>
-            <td>Ativo</td>
-            <td>
-              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
-              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="./assets/Civic.jpg" alt="carro"></td>
-            <td>XYZ-9876</td>
-            <td>Civic</td>
-            <td>Ativo</td>
-            <td>
-              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
-              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="./assets/gol.jpg" alt="carro"></td>
-            <td>KLM-4567</td>
-            <td>Gol</td>
-            <td>Inativo</td>
-            <td>
-              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
-              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="./assets/corollagr.jpg" alt="carro"></td>
-            <td>QWE-1122</td>
-            <td>Corolla</td>
-            <td>Ativo</td>
-            <td>
-              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
-              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
-            </td>
-          </tr>
-          <tr>
-            <td><img src="./assets/Onix.jpg"  alt="carro"></td>
-            <td>RTY-3344</td>
-            <td>Onix</td>
-            <td>Ativo</td>
-            <td>
-              <button class="btn alterar" onclick="abrirPopup(this)">Alterar</button>
-              <button class="btn finalizar" onclick="fecharPopup()">Finalizar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </main>
 
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <h2>Alterar Veículo</h2>
-    <form id="form-veiculo">
-      <div class="field">
-        <label for="imagem">Imagem (URL):</label>
-        <input type="text" id="imagem" name="imagem" placeholder="https://..." required>
-      </div>
-      <div class="field">
-        <label for="placa">Placa:</label>
-        <input type="text" id="placa" name="placa" required>
-      </div>
-      <div class="field">
-        <label for="modelo">Modelo:</label>
-        <input type="text" id="modelo" name="modelo" required>
-      </div>
-      <div class="field">
-        <label for="status">Status:</label>
-        <select id="status" name="status" required>
-          <option value="Ativo">Ativo</option>
-          <option value="Inativo">Inativo</option>
-          <option value="Manutenção">Manutenção</option>
-        </select>
-      </div>
-      <div class="popup-actions">
-        <button type="button" class="btn cancelar" onclick="fecharPopup()">Cancelar</button>
-        <button type="submit" class="btn salvar">Salvar</button>
-      </div>
-    </form>
-  </div>
-</div>
+    <footer>
+        
+        <p class="paragraph-footer">© 2025 Estacionar. Todos os direitos reservados.</p>
+
+        <p>
+            Este projeto é uma ferramenta educacional e não comercial. As informações e imagens são utilizadas
+            para fins de demonstração, aprendizado e ilustração de conceitos de desenvolvimento web.
+        </p>
+    </footer>
 
 </body>
 </html>

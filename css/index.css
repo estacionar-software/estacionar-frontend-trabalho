@@ -214,14 +214,28 @@ body{
 .explain-about-site {
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-color: #222;
   margin-top: 1vh;
-  height: 130px;
+  height: 150;
   width: 90%;
   margin: 1vh auto 0 auto;
 }
 
-.explain-about-site h2 {
+.explain-about-site h1 {
   color: #22b573;
+  font-weight: bold;
+}
+
+footer {
+  margin: auto;
+}
+
+.paragraph-footer{
+  color: #22b573;
+}
+
+.content img {
+  display: block;
+  margin: 50px auto 110px auto;
+  height: 500px;
+  width: 1000px;
 }
