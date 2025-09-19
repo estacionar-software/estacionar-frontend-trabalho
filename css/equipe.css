@@ -86,7 +86,7 @@ body{
 main {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 150px;
 }
 
 .card {
@@ -157,7 +157,9 @@ textarea {
 }
 
 footer {
-  margin: auto;
+  margin-top: 235px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .paragraph-footer{
